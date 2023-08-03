@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Htoo Aung Lynn</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="min-h-screen bg-slate-50 dark:bg-slate-950 dark:text-slate-50">
+    <!-- Nav Start -->
+    <nav class="bg-teal-700 text-slate-50 sticky top-0 z-10">
+        <article class="max-w-4xl mx-auto p-4 flex justify-between items-center">
+            <h1 class="text-3xl font-medium">
+                <a href="#me">Htoo Aung Lynn</a>
+            </h1>
+            <section class="navLink hidden md:block bg-teal-700 absolute left-0 top-20 w-full md:min-h-fit md:static  md:w-fit ">
+                <ul class="flex md:flex-row flex-col items-center gap-8 md:justify-end">
+                    <li class="p-5 text-xl hover:opacity-60">
+                        <a href="#project">Project</a>
+                    </li>
+                    <li class="p-5 text-xl hover:opacity-60">
+                        <a href="#skill">Skill</a>
+                    </li>
+                    <li class="p-5 text-xl hover:opacity-60">
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </section>
+            <ion-icon name="menu-outline" onclick="onToggle(this)" class="text-4xl hover:opacity-60 cursor-pointer md:hidden"></ion-icon>
+        </article>
+    </nav>
+    <!-- Nav End -->
+
+    <!-- Main Start -->
+    <main class="max-w-4xl mx-auto">
+
+        <!-- Me Section Start -->
+        <section id="me"
+            class="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-28 mt-10 scroll-mt-40 widescreen:section-min-height tallscreen:section-min-height">
+            <article class="sm:w-1/2 ">
+                <p class="text-slate-950 dark:text-slate-50 text-3xl">I'm</p>
+                <p class="text-slate-400 dark:text-slate-600 text-left sm:text-center md:text-5xl text-3xl">Htoo Aung Lynn</p>
+                <p class="text-slate-400 dark:text-slate-600 md:text-4xl text-2xl">Developer</p>
+            </article>
+            <img src="./img/Profile.png" class="w-2/4 sm:w-1/4" alt="Profile">
+        </section>
+        <!-- Me Section Start -->
+
+        <hr class="mx-auto bg-slate-950 dark:bg-white w-1/2">
+
+        <!-- Project Section Start -->
+        <section id="project" class="p-6 my-12 min-h-screen scroll-mt-20">
+            <h2 class="text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900 dark:text-slate-50">
+                Project
+            </h2>
+            <section class="w-full h-96 flex flex-wrap gap-1 justify-evenly items-center">
+                <article class="w-5/12">
+                    <a href="https://fakeshop13.netlify.app/" target="_blank">
+                        <img src="./img/project1.png"   alt="project 1">
+                    </a>
+                </article>
+                <article class="w-5/12">
+                    <a href="https://skatercustom.netlify.app/" target="_blank">
+                        <img src="./img/project3.png"  alt="project 3">
+                    </a>
+                </article>
+                <article class="w-5/12">
+                    <a href="https://coffeetemplate.netlify.app/" target="_blank">
+                        <img src="./img/project2.png"  alt="project 2">
+                    </a>
+                </article>
+            </section>
+        </section>
+        <!-- Project Section End -->
+
+        <hr class="mx-auto bg-slate-950 dark:bg-white w-1/2">
+
+        <!-- Skill Section Start -->
+        <section id="skill" class="p-6 my-12 scroll-mt-20">
+            <h2 class="text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900 dark:text-slate-50">
+                Software Skill
+            </h2>
+            <!-- front end Start -->
+            <figure class="my-12">
+                <blockquote class="dark:bg-slate-50 pl-14 pr-8 py-12 rounded-3xl relative">
+                    <article
+                        class="text-2xl sm:text-3xl text-left mt-2 text-slate-950 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-slate-950 before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-slate-950 after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2">
+                        <section>
+                            <h2 class="px-7 text-3xl font-bold">Front end</h2>
+                            <div class=" max-w-full max-h-full px-7 py-4 flex flex-col justify-center items-center">
+                                <div class=" w-full flex justify-between">
+                                    <h2 class="text-2xl">HTML & CSS</h2>
+                                    <h2 class="text-2xl">80%</h2>
+                                </div>
+                                <div
+                                    class="w-full h-2 bg-5xl bg-slate-700 border-2 border-slate-950 shadow-2xl  dark:bg-slate-50">
+                                    <hr class="w-10/12 h-full bg-teal-400 dark:bg-slate-500">
+                                </div>
+                            </div>
+
+                            <div class=" max-w-full max-h-full px-7 py-4 flex flex-col justify-center items-center">
+                                <div class=" w-full flex justify-between">
+                                    <h2 class="text-2xl">JS</h2>
+                                    <h2 class="text-2xl">50%</h2>
+                                </div>
+                                <div
+                                    class="w-full h-2 bg-5xl bg-slate-700 border-2 border-slate-950 shadow-2xl  dark:bg-slate-50">
+                                    <hr class="w-2/4 h-full bg-teal-400 dark:bg-slate-500">
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </blockquote>
+            </figure>
+            <!-- front end End -->
+
+            <!-- back end Start -->
+            <figure class="my-12">
+                <blockquote class="text-slate-50 dark:bg-slate-50 pl-14 pr-8 py-12 rounded-3xl relative">
+                    <article
+                        class="text-2xl sm:text-3xl text-left mt-2 text-slate-950 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-slate-950 before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-slate-950 after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2">
+                        <section>
+                            <h2 class="px-7 text-3xl font-bold">Back end</h2>
+                            <div class=" max-w-full max-h-full px-7 py-4 flex flex-col justify-center items-center">
+                                <div class=" w-full flex justify-between">
+                                    <h2 class="text-2xl">PHP</h2>
+                                    <h2 class="text-2xl">70%</h2>
+                                </div>
+                                <div
+                                    class="w-full h-2 bg-5xl bg-slate-700 border-2 border-slate-950 shadow-2xl  dark:bg-slate-50">
+                                    <hr class="w-8/12 h-full bg-teal-400 dark:bg-slate-500">
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </blockquote>
+            </figure>
+            <!-- back end End -->
+
+            <!-- Frameworks Start -->
+            <figure class="my-12">
+                <blockquote class="text-slate-50 dark:bg-slate-50 pl-14 pr-8 py-12 rounded-3xl relative">
+                    <article
+                        class="text-2xl sm:text-3xl text-left mt-2 text-slate-950 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-slate-950 before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-slate-950 after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2">
+                        <section>
+                            <h2 class="px-7 text-3xl font-bold">Framework</h2>
+                            <!-- bootstrp Strat -->
+                            <div class=" max-w-full max-h-full px-7 py-4 flex flex-col justify-center items-center">
+                                <div class=" w-full flex justify-between">
+                                    <h2 class="text-2xl">Bootstrap</h2>
+                                    <h2 class="text-2xl">90%</h2>
+                                </div>
+                                <div
+                                    class="w-full h-2 bg-5xl bg-slate-700 border-2 border-slate-950 shadow-2xl  dark:bg-slate-50">
+                                    <hr class="w-11/12 h-full bg-teal-400 dark:bg-slate-500">
+                                </div>
+                            </div>
+                            <!-- bootstrap End -->
+
+                            <!-- Tailwind Start -->
+                            <div class=" max-w-full max-h-full px-7 py-4 flex flex-col justify-center items-center">
+                                <div class=" w-full flex justify-between">
+                                    <h2 class="text-2xl">Tailwind</h2>
+                                    <h2 class="text-2xl">40%</h2>
+                                </div>
+                                <div
+                                    class="w-full h-2 bg-5xl bg-slate-700 border-2 border-slate-950 shadow-2xl  dark:bg-slate-50">
+                                    <hr class="w-2/6 h-full bg-teal-400 dark:bg-slate-500">
+                                </div>
+                            </div>
+                            <!-- Tailwind End -->
+
+                            <!-- Vue Start -->
+                            <div class=" max-w-full max-h-full px-7 py-4 flex flex-col justify-center items-center">
+                                <div class=" w-full flex justify-between">
+                                    <h2 class="text-2xl">Vue</h2>
+                                    <h2 class="text-2xl">20%</h2>
+                                </div>
+                                <div
+                                    class="w-full h-2 bg-5xl bg-slate-700 border-2 border-slate-950 shadow-2xl  dark:bg-slate-50">
+                                    <hr class="w-1/4 h-full bg-teal-400 dark:bg-slate-500">
+                                </div>
+                            </div>
+                            <!-- Vue End -->
+                        </section>
+                    </article>
+                </blockquote>
+            </figure>
+            <!-- Frameworks End -->
+
+            <!-- Language Start -->
+            <figure class="my-12">
+                <blockquote class="text-slate-50 dark:bg-slate-50 pl-14 pr-8 py-12 rounded-3xl relative">
+                    <article
+                        class="text-2xl sm:text-3xl text-left mt-2 text-slate-950 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-slate-950 before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-slate-950 after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2">
+                        <section>
+                            <h2 class="px-7 text-3xl font-bold">Language</h2>
+                            <!-- C# Strat -->
+                            <div class=" max-w-full max-h-full px-7 py-4 flex flex-col justify-center items-center">
+                                <div class=" w-full flex justify-between">
+                                    <h2 class="text-2xl">C#</h2>
+                                    <h2 class="text-2xl">70%</h2>
+                                </div>
+                                <div
+                                    class="w-full h-2 bg-5xl bg-slate-700 border-2 border-slate-950 shadow-2xl  dark:bg-slate-50">
+                                    <hr class="w-3/4 h-full bg-teal-400 dark:bg-slate-500">
+                                </div>
+                            </div>
+                            <!-- C# End -->
+
+                            <!-- Java Start -->
+                            <div class=" max-w-full max-h-full px-7 py-4 flex flex-col justify-center items-center">
+                                <div class=" w-full flex justify-between">
+                                    <h2 class="text-2xl">Java</h2>
+                                    <h2 class="text-2xl">50%</h2>
+                                </div>
+                                <div
+                                    class="w-full h-2 bg-5xl bg-slate-700 border-2 border-slate-950 shadow-2xl  dark:bg-slate-50">
+                                    <hr class="w-2/4 h-full bg-teal-400 dark:bg-slate-500">
+                                </div>
+                            </div>
+                            <!-- Java End -->
+
+                            <!-- C++ Start -->
+                            <div class=" max-w-full max-h-full px-7 py-4 flex flex-col justify-center items-center">
+                                <div class=" w-full flex justify-between">
+                                    <h2 class="text-2xl">C++</h2>
+                                    <h2 class="text-2xl">20%</h2>
+                                </div>
+                                <div
+                                    class="w-full h-2 bg-5xl bg-slate-700 border-2 border-slate-950 shadow-2xl  dark:bg-slate-50">
+                                    <hr class="w-1/4 h-full bg-teal-400 dark:bg-slate-500">
+                                </div>
+                            </div>
+                            <!-- C++ End -->
+                        </section>
+                    </article>
+                </blockquote>
+            </figure>
+            <!-- Language End -->
+
+            <!-- Language Start -->
+            <figure class="my-12">
+                <blockquote class="text-slate-50 dark:bg-slate-50 pl-14 pr-8 py-12 rounded-3xl relative">
+                    <article
+                        class="text-2xl sm:text-3xl text-left mt-2 text-slate-950 before:content-['\201C'] before:font-serif before:absolute before:top-0 before:left-0 before:text-9xl before:text-slate-950 before:opacity-25 before:transform before:translate-x-2 before:translate-y-2 after:content-['\201D'] after:font-serif after:absolute after:-bottom-20 after:right-0 after:text-9xl after:text-slate-950 after:opacity-25 after:transform after:-translate-x-2 after:-translate-y-2">
+                        <section>
+                            <h2 class="px-7 text-3xl font-bold">Version control system</h2>
+                            <!-- version control system Strat -->
+                            <div class=" max-w-full max-h-full px-7 py-4 flex flex-col justify-center items-center">
+                                <div class=" w-full flex justify-between">
+                                    <h2 class="text-2xl">Git</h2>
+                                    <h2 class="text-2xl">40%</h2>
+                                </div>
+                                <div
+                                    class="w-full h-2 bg-5xl bg-slate-700 border-2 border-slate-950 shadow-2xl  dark:bg-slate-50">
+                                    <hr class="w-2/6 h-full bg-teal-400 dark:bg-slate-500">
+                                </div>
+                            </div>
+                            <!-- version control system End -->
+                        </section>
+                    </article>
+                </blockquote>
+            </figure>
+            <!-- Language End -->
+        </section>
+        <!-- Skill Section End -->
+
+        <hr class="mx-auto bg-slate-950 dark:bg-white w-1/2">
+
+        <!-- Contact Section Start -->
+        <section id="contact" class="p-6 my-12 scroll-mt-20 widescreen:section-min-height tallscreen:section-min-height">
+            <h2 class="text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900 dark:text-slate-50">
+                Contact
+            </h2>
+            <form action="" class="mx-auto max-w-4xl text-2xl sm:text-3xl flex flex-col items-left gap-4">
+
+                <!-- Email -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required minlength="3" maxlength="30"
+                    placeholder="Your email"
+                    class="w-full text-slate-950 sm:text-3xl p-3 rounded-xl border border-solid border-slate-400 dark:border-none">
+
+                <!-- Subject -->
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required minlength="3" maxlength="30"
+                    placeholder="Your Subject"
+                    class="w-full text-slate-950 sm:text-3xl p-3 rounded-xl border border-solid border-slate-400 dark:border-none">
+
+
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required
+                    class="w-full text-slate-950 text-2xl sm:text-3xl p-3 rounded-xl border border-solid border-slate-400 dark:border-none"></textarea>
+
+                <button
+                    class="bg-teal-700 hover:bg-teal-600 active:bg-teal-500 text-slate-50 p-3 w-48 rounded-xl border border-solid border-slate-950 dark:border-none">Send</button>
+            </form>
+        </section>
+        <!-- Contact Section End -->
+
+    </main>
+    <!-- Main End -->
+
+    <!-- Footer Start -->
+    <footer id="footer" class="bg-teal-700 text-slate-50 text-xl">
+        <section class="max-w-4xl mx-auto flex flex-col sm:flex-row sm:justify-between">
+            <address>
+                <h2>ThuKa Street, Tamwe Township</h2>
+                Yangon. <br>
+                Email: <a href="mailto:htooaunglynn8@gmail.com">htooaunglynn8@gmail.com</a> <br>
+                Phone: <a href="tel:+959425800061">+95 94258 000 61</a>
+            </address>
+            <nav class="hidden md:flex flex-col gap-2" aria-label="footer">
+                <a href="#about" class="hover:opacity-90">About</a>
+                <a href="#skill" class="hover:opacity-90">Skill</a>
+                <a href="#contact" class="hover:opacity-90">Contact</a>
+            </nav>
+            <article class="flex flex-col sm:gap-2">
+                <p class="text-right">Copyright &copy; <span id="year">2023</span> </p>
+            </article>
+        </section>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+
+    <!-- ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
