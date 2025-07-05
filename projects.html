@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Htoo Aung Lynn</title>
+    <title>John Doe - Portfolio</title>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -40,7 +40,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <!-- ç -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <style>
@@ -151,8 +151,6 @@
             font-family: 'Orbitron', monospace;
         }
     </style>
-
-    <link rel="shortcut icon" href="./fav.ico" type="image/x-icon">
 </head>
 
 <body class="bg-gradient-to-br from-midnight via-deep-purple to-dark-slate text-white min-h-screen">
@@ -170,6 +168,10 @@
                         class="nav-link text-gray-300 hover:text-neon-purple transition-all duration-300 font-medium">
                         About
                     </a>
+                    <a href="#projects"
+                        class="nav-link text-gray-300 hover:text-electric-green transition-all duration-300 font-medium">
+                        Projects
+                    </a>
                 </div>
                 <button id="mobileMenuBtn" class="md:hidden text-cyber-blue">
                     <i class="fas fa-bars text-xl"></i>
@@ -180,6 +182,7 @@
                 <div class="flex flex-col space-y-4">
                     <a href="#home" class="text-gray-300 hover:text-cyber-blue transition-colors">Home</a>
                     <a href="#about" class="text-gray-300 hover:text-neon-purple transition-colors">About</a>
+                    <a href="#projects" class="text-gray-300 hover:text-electric-green transition-colors">Projects</a>
                 </div>
             </div>
         </div>
@@ -196,12 +199,13 @@
                 style="animation-delay: 2s;"></div>
         </div>
 
-        <div class="container mx-auto px-6 text-center relative z-10 top-28 sm:top-12 md:top-26 lg:top-24 xl:top-20">
+        <div class="container mx-auto px-6 text-center relative z-10">
             <div class="max-w-4xl mx-auto">
                 <!-- Profile Image -->
                 <div class="relative mb-8 inline-block">
                     <div class="w-40 h-40 mx-auto rounded-full overflow-hidden neon-glow animate-pulse-slow">
-                        <img src="./image.PNG" alt="Profile" class="w-full h-full object-cover">
+                        <img src="/placeholder.svg?height=160&width=160" alt="Profile"
+                            class="w-full h-full object-cover">
                     </div>
                     <div
                         class="absolute -top-2 -right-2 w-8 h-8 bg-electric-green rounded-full flex items-center justify-center animate-float">
@@ -221,6 +225,10 @@
                         <i class="fas fa-laptop-code mr-2 text-cyber-blue"></i>
                         <span class="font-semibold">Full Stack Developer</span>
                     </div>
+                    <div class="px-6 py-3 bg-neon-purple/20 border border-neon-purple/50 rounded-full backdrop-blur-sm">
+                        <i class="fas fa-palette mr-2 text-neon-purple"></i>
+                        <span class="font-semibold">UI/UX Designer</span>
+                    </div>
                 </div>
 
                 <!-- Description -->
@@ -233,9 +241,29 @@
                 <!-- CTA Buttons -->
                 <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-in"
                     style="animation-delay: 0.9s;">
+                    <a href="#projects"
+                        class="px-8 py-4 bg-gradient-to-r from-cyber-blue to-neon-purple text-white font-bold rounded-full hover:scale-105 transition-all duration-300 neon-glow">
+                        View My Work
+                    </a>
                     <a href="https://github.com"
                         class="px-8 py-4 border-2 border-electric-green text-electric-green font-bold rounded-full hover:bg-electric-green hover:text-midnight transition-all duration-300">
                         GitHub Profile
+                    </a>
+                </div>
+
+                <!-- Social Links -->
+                <div class="flex justify-center space-x-6 animate-fade-in" style="animation-delay: 1.2s;">
+                    <a href="https://github.com"
+                        class="w-12 h-12 bg-gray-800/50 rounded-full flex items-center justify-center hover:bg-cyber-blue/20 hover:text-cyber-blue transition-all duration-300 backdrop-blur-sm">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://linkedin.com"
+                        class="w-12 h-12 bg-gray-800/50 rounded-full flex items-center justify-center hover:bg-neon-purple/20 hover:text-neon-purple transition-all duration-300 backdrop-blur-sm">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://twitter.com"
+                        class="w-12 h-12 bg-gray-800/50 rounded-full flex items-center justify-center hover:bg-electric-green/20 hover:text-electric-green transition-all duration-300 backdrop-blur-sm">
+                        <i class="fab fa-twitter text-xl"></i>
                     </a>
                 </div>
             </div>
@@ -254,7 +282,8 @@
                     <!-- Image Side -->
                     <div class="relative">
                         <div class="relative overflow-hidden rounded-2xl">
-                            <img src="./image.PNG" alt="About me" class="w-full h-[600px] object-cover">
+                            <img src="/placeholder.svg?height=500&width=400" alt="About me"
+                                class="w-full h-96 object-cover">
                             <div class="absolute inset-0 bg-gradient-to-t from-cyber-blue/30 to-transparent"></div>
                         </div>
                         <!-- Floating Tech Orbs -->
@@ -271,7 +300,7 @@
                     <!-- Content Side -->
                     <div class="space-y-6">
                         <p class="text-lg text-gray-300 leading-relaxed">
-                            I'm a passionate full-stack developer with over 1 years of experience in creating
+                            I'm a passionate full-stack developer with over 5 years of experience in creating
                             cutting-edge digital solutions. I specialize in modern web technologies and have
                             a keen eye for design that bridges the gap between functionality and aesthetics.
                         </p>
@@ -291,11 +320,11 @@
                         <!-- Stats -->
                         <div class="grid grid-cols-3 gap-6 mt-8 pt-8 border-t border-gray-700">
                             <div class="text-center">
-                                <div class="text-3xl font-bold text-cyber-blue cyber-font">5+</div>
+                                <div class="text-3xl font-bold text-cyber-blue cyber-font">50+</div>
                                 <div class="text-gray-400 text-sm">Projects</div>
                             </div>
                             <div class="text-center">
-                                <div class="text-3xl font-bold text-neon-purple cyber-font">1+</div>
+                                <div class="text-3xl font-bold text-neon-purple cyber-font">5+</div>
                                 <div class="text-gray-400 text-sm">Years Exp</div>
                             </div>
                             <div class="text-center">
@@ -309,11 +338,56 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold cyber-font text-center mb-16">
+                    <span class="gradient-text">FEATURED PROJECTS</span>
+                </h2>
+
+                <!-- Project Filter -->
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <button
+                        class="filter-btn active px-6 py-2 rounded-full border border-cyber-blue/50 text-cyber-blue hover:bg-cyber-blue/20 transition-all duration-300"
+                        data-filter="all">
+                        All Projects
+                    </button>
+                    <button
+                        class="filter-btn px-6 py-2 rounded-full border border-neon-purple/50 text-neon-purple hover:bg-neon-purple/20 transition-all duration-300"
+                        data-filter="web">
+                        Web Apps
+                    </button>
+                    <button
+                        class="filter-btn px-6 py-2 rounded-full border border-electric-green/50 text-electric-green hover:bg-electric-green/20 transition-all duration-300"
+                        data-filter="mobile">
+                        Mobile
+                    </button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div id="projectsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Projects will be populated by JavaScript -->
+                </div>
+
+                <!-- View More Button -->
+                <div class="text-center mt-12">
+                    <a href="https://github.com"
+                        class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-sunset-orange to-neon-purple text-white font-bold rounded-full hover:scale-105 transition-all duration-300 neon-glow">
+                        <i class="fab fa-github mr-2"></i>
+                        View All on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="py-8 border-t border-gray-800">
         <div class="container mx-auto px-6 text-center">
             <p class="text-gray-400">
-                © <span id="currentYear"></span> Htoo Aung Lynn
+                © <span id="currentYear"></span> John Doe. Crafted with
+                <span class="text-cyber-blue">⚡</span> and
                 <span class="text-neon-purple">JavaScript</span>
             </p>
         </div>
