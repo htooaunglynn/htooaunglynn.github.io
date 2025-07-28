@@ -4,7 +4,7 @@ const portfolioData = {
         { name: "JavaScript", icon: "fab fa-js-square", color: "cyber-blue" },
         // { name: "React", icon: "fab fa-react", color: "cyber-blue" },
         // { name: "Node.js", icon: "fab fa-node-js", color: "electric-green" },
-        // { name: "Python", icon: "fab fa-python", color: "neon-purple" },
+        { name: "Python", icon: "fab fa-python", color: "neon-purple" },
         // { name: "TypeScript", icon: "fas fa-code", color: "cyber-blue" },
         // { name: "Vue.js", icon: "fab fa-vuejs", color: "electric-green" },
         { name: "SQL", icon: "fas fa-database", color: "neon-purple" },
