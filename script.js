@@ -1,357 +1,509 @@
-// Portfolio Data
-const portfolioData = {
-    skills: [
-        { name: "JavaScript", icon: "fab fa-js-square", color: "cyber-blue" },
-        // { name: "React", icon: "fab fa-react", color: "cyber-blue" },
-        // { name: "Node.js", icon: "fab fa-node-js", color: "electric-green" },
-        { name: "Python", icon: "fab fa-python", color: "neon-purple" },
-        // { name: "TypeScript", icon: "fas fa-code", color: "cyber-blue" },
-        // { name: "Vue.js", icon: "fab fa-vuejs", color: "electric-green" },
-        { name: "SQL", icon: "fas fa-database", color: "neon-purple" },
-        // { name: "AWS", icon: "fab fa-aws", color: "sunset-orange" },
-        // { name: "Docker", icon: "fab fa-docker", color: "cyber-blue" },
-        { name: "Git", icon: "fab fa-git-alt", color: "sunset-orange" },
-        // { name: "GraphQL", icon: "fas fa-project-diagram", color: "neon-purple" },
-        { name: "PHP", icon: "fa-brands fa-php", color: "electric-green" },
-        { name: "Laravel", icon: "fa-brands fa-laravel", color: "cyber-blue" },
-    ],
+const skillGroups = [
+    {
+        title: "Programming Languages",
+        items: ["JavaScript (ES6+)", "TypeScript", "PHP", "C# (basics)", "Python (basics)", "C++ (basics)"],
+    },
+    {
+        title: "Backend Development",
+        items: [
+            "Node.js",
+            "NestJS",
+            "Express",
+            "Laravel",
+            "REST API Development",
+            "API Design",
+            "MVC",
+            "JWT & Refresh Tokens",
+            "Role-Based Access Control (RBAC)",
+            "Clean Architecture",
+            "Dependency Injection",
+            "Service Layer",
+            "Repository Pattern",
+        ],
+    },
+    {
+        title: "Frontend Development",
+        items: [
+            "React",
+            "Next.js (SSR, CSR, SEO)",
+            "Vue.js",
+            "Angular",
+            "HTML5",
+            "CSS3",
+        ],
+    },
+    {
+        title: "Databases & Data Management",
+        items: [
+            "PostgreSQL",
+            "MySQL",
+            "MSSQL",
+            "Prisma",
+            "TypeORM",
+            "Eloquent ORM",
+            "Database Design",
+            "Indexing",
+            "Query Optimization",
+            "Transactions",
+        ],
+    },
+    {
+        title: "DevOps & Cloud",
+        items: [
+            // "Docker",
+            // "Docker Compose",
+            "CI/CD (GitHub Actions, GitLab CI)",
+            "Linux",
+            // "AWS",
+            "DigitalOcean",
+            "Environment Configuration",
+            // "Secrets Management",
+        ],
+    },
+    {
+        title: "Performance & Scalability",
+        items: [
+            // "Redis Caching",
+            "Background Jobs",
+            "Queues",
+            "API Performance Optimization",
+            // "Monitoring and Logging",
+        ],
+    },
+];
 
-    projects: [
-        {
-            title: "CyberCommerce Platform",
-            description: "Next-gen e-commerce platform with AI-powered recommendations and real-time analytics dashboard.",
-            image: "/placeholder.svg?height=300&width=400",
-            technologies: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
-            github: "https://github.com",
-            demo: "https://demo.com",
-            category: "web",
-            featured: true,
-        },
-        {
-            title: "Neural Task Manager",
-            description: "AI-enhanced task management with smart scheduling and team collaboration features.",
-            image: "/placeholder.svg?height=300&width=400",
-            technologies: ["React", "Node.js", "Socket.io", "MongoDB"],
-            github: "https://github.com",
-            demo: "https://demo.com",
-            category: "web",
-            featured: true,
-        },
-        {
-            title: "Quantum Weather App",
-            description: "Advanced weather forecasting with interactive 3D visualizations and climate predictions.",
-            image: "/placeholder.svg?height=300&width=400",
-            technologies: ["Vue.js", "Three.js", "OpenWeather API", "Tailwind"],
-            github: "https://github.com",
-            demo: "https://demo.com",
-            category: "web",
-            featured: false,
-        },
-        {
-            title: "CryptoTracker Mobile",
-            description: "Real-time cryptocurrency tracking with portfolio management and price alerts.",
-            image: "/placeholder.svg?height=300&width=400",
-            technologies: ["React Native", "Redux", "CoinGecko API", "Firebase"],
-            github: "https://github.com",
-            demo: "https://demo.com",
-            category: "mobile",
-            featured: true,
-        },
-        {
-            title: "AR Fitness Coach",
-            description: "Augmented reality fitness application with pose detection and workout guidance.",
-            image: "/placeholder.svg?height=300&width=400",
-            technologies: ["React Native", "TensorFlow", "ARCore", "Firebase"],
-            github: "https://github.com",
-            demo: "https://demo.com",
-            category: "mobile",
-            featured: false,
-        },
-        {
-            title: "Blockchain Voting System",
-            description: "Secure and transparent voting platform built on blockchain technology.",
-            image: "/placeholder.svg?height=300&width=400",
-            technologies: ["Solidity", "Web3.js", "React", "Ethereum"],
-            github: "https://github.com",
-            demo: "https://demo.com",
-            category: "web",
-            featured: true,
-        },
-    ],
-}
+const projectData = [
+    {
+        title: "Full-Stack SaaS Platform (Capstone Project)",
+        stack: "NestJS, Next.js, TypeScript, PostgreSQL, Redis, Docker, CI/CD, Cloud",
+        highlights: [
+            "Designed clean architecture with modular backend boundaries.",
+            "Built JWT auth, refresh token flows, and role-based authorization.",
+            "Shipped SSR public pages and secure client dashboards.",
+            "Added Redis caching and async jobs for better runtime performance.",
+        ],
+    },
+    {
+        title: "Gym Management System",
+        stack: "NestJS, Prisma, Next.js, Docker",
+        highlights: [
+            "Implemented role-specific flows for admin, trainer, and member.",
+            "Designed permission-based access control and auth middleware.",
+            "Separated domain logic from infrastructure for maintainability.",
+            "Containerized environments for consistent local and production behavior.",
+        ],
+    },
+    {
+        title: "User Management API",
+        stack: "Node.js, Express/Fastify, TypeScript",
+        highlights: [
+            "Built REST APIs from scratch to understand Node.js internals deeply.",
+            "Implemented CRUD, validation, auth, and centralized error handling.",
+            "Applied controller-service-repository architecture for testability.",
+        ],
+    },
+    {
+        title: "Admin Dashboard",
+        stack: "Vanilla JavaScript, Vite",
+        highlights: [
+            "Created a lightweight dashboard optimized for browser rendering performance.",
+            "Integrated REST APIs and implemented robust authentication flows.",
+            "Improved client-side performance and state management patterns.",
+        ],
+    },
+    {
+        title: "CLI Tool & API",
+        stack: "Node.js, TypeScript",
+        highlights: [
+            "Built CLI workflows that communicate with backend APIs.",
+            "Implemented async flows with Promises and async/await.",
+            "Shared TypeScript types between CLI and API for stronger consistency.",
+        ],
+    },
+];
 
-// Color mapping for technologies
-const techColors = {
-    0: "text-cyber-blue border-cyber-blue/50 bg-cyber-blue/10",
-    1: "text-neon-purple border-neon-purple/50 bg-neon-purple/10",
-    2: "text-electric-green border-electric-green/50 bg-electric-green/10",
-    3: "text-sunset-orange border-sunset-orange/50 bg-sunset-orange/10",
-}
+const smileFallbacks = [
+    "Nice hover. You just unlocked bonus joy.",
+    "You hover like an engineer with taste.",
+    "That card felt appreciated.",
+    "Micro-interaction approved.",
+];
 
-// Initialize the portfolio
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const hasFinePointer = window.matchMedia("(pointer: fine)").matches;
+
+let smileCount = 0;
+let smileResetTimer = null;
+let lastSparkleAt = 0;
+let lastSmileAt = 0;
+
+const refs = {
+    face: null,
+    smileText: null,
+    smileCount: null,
+    mobileMenu: null,
+    mobileButton: null,
+    copyFeedback: null,
+};
+
 document.addEventListener("DOMContentLoaded", () => {
-    initializePortfolio()
-    setupEventListeners()
-    setupScrollAnimations()
-    updateCurrentYear()
-    setupMobileMenu()
-})
+    renderSkills();
+    renderProjects();
 
-function initializePortfolio() {
-    renderSkills()
-    renderProjects()
-}
+    refs.face = document.getElementById("smileFace");
+    refs.smileText = document.getElementById("smileText");
+    refs.smileCount = document.getElementById("smileCount");
+    refs.mobileMenu = document.getElementById("mobileMenu");
+    refs.mobileButton = document.getElementById("mobileMenuButton");
+    refs.copyFeedback = document.getElementById("copyFeedback");
+
+    setupMobileMenu();
+    setupSmoothScroll();
+    setupRevealAnimations();
+    setupTiltCards();
+    setupCheerSystem();
+    setupMagneticButtons();
+    setupCopyEmail();
+    setupScrollProgress();
+    setupBackgroundParallax();
+    updateCurrentYear();
+});
 
 function renderSkills() {
-    const skillsContainer = document.getElementById("skillsContainer")
-    if (!skillsContainer) return
+    const grid = document.getElementById("skillsGrid");
+    if (!grid) return;
 
-    skillsContainer.innerHTML = portfolioData.skills
+    grid.innerHTML = skillGroups
         .map(
-            (skill) => `
-        <div class="group p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 hover:border-${skill.color}/50 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105">
-            <div class="flex flex-col items-center text-center space-y-2">
-                <i class="${skill.icon} text-2xl text-${skill.color} group-hover:animate-pulse"></i>
-                <span class="text-sm font-medium text-gray-300 group-hover:text-white">${skill.name}</span>
-            </div>
-        </div>
-    `,
-        )
-        .join("")
-}
-
-function renderProjects(filter = "all") {
-    const projectsGrid = document.getElementById("projectsGrid")
-    if (!projectsGrid) return
-
-    const filteredProjects = portfolioData.projects.filter((project) => filter === "all" || project.category === filter)
-
-    projectsGrid.innerHTML = filteredProjects
-        .map(
-            (project) => `
-        <div class="project-card group rounded-2xl overflow-hidden transition-all duration-500 hover:scale-105 ${project.featured ? "ring-2 ring-cyber-blue/30" : ""
-                }">
-            ${project.featured
-                    ? '<div class="bg-gradient-to-r from-cyber-blue to-neon-purple text-white text-center py-2 text-sm font-bold">⚡ FEATURED PROJECT</div>'
-                    : ""
-                }
-
-            <div class="relative overflow-hidden">
-                <img src="${project.image}" alt="${project.title}" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
-                <div class="absolute inset-0 bg-gradient-to-t from-midnight/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div class="absolute top-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <a href="${project.github}" class="w-8 h-8 bg-cyber-blue/80 rounded-full flex items-center justify-center hover:bg-cyber-blue transition-colors">
-                        <i class="fab fa-github text-white text-sm"></i>
-                    </a>
-                    <a href="${project.demo}" class="w-8 h-8 bg-neon-purple/80 rounded-full flex items-center justify-center hover:bg-neon-purple transition-colors">
-                        <i class="fas fa-external-link-alt text-white text-sm"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="p-6">
-                <h3 class="text-xl font-bold text-white mb-2 cyber-font">${project.title}</h3>
-                <p class="text-gray-400 text-sm mb-4 leading-relaxed">${project.description}</p>
-
-                <div class="flex flex-wrap gap-2">
-                    ${project.technologies
-                    .map((tech, index) => {
-                        const colorClass = techColors[index % 4]
-                        return `<span class="px-3 py-1 text-xs font-medium rounded-full border ${colorClass}">${tech}</span>`
-                    })
+            (group) => `
+        <article class="glass-card story-card tilt-card p-6 reveal" data-reveal data-tilt data-cheer="${group.title} loaded.">
+            <p class="text-xs font-semibold uppercase tracking-wider text-teal">${group.title}</p>
+            <ul class="mt-4 flex flex-wrap gap-2">
+                ${group.items
+                    .map(
+                        (item) => `<li>
+                        <span class="pill inline-flex rounded-full px-3 py-1.5 text-xs font-medium text-ink/80" data-cheer="${item} is part of the stack.">${item}</span>
+                    </li>`,
+                    )
                     .join("")}
-                </div>
-            </div>
-        </div>
+            </ul>
+        </article>
     `,
         )
-        .join("")
+        .join("");
 }
 
-function setupEventListeners() {
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault()
-            const target = document.querySelector(this.getAttribute("href"))
-            if (target) {
-                const offsetTop = target.offsetTop - 80
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: "smooth",
-                })
-            }
-        })
-    })
+function renderProjects() {
+    const grid = document.getElementById("projectsGrid");
+    if (!grid) return;
 
-    // Project filtering
-    document.querySelectorAll(".filter-btn").forEach((btn) => {
-        btn.addEventListener("click", function () {
-            // Remove active class from all buttons
-            document.querySelectorAll(".filter-btn").forEach((b) => b.classList.remove("active"))
-            // Add active class to clicked button
-            this.classList.add("active")
-
-            // Filter projects
-            const filter = this.getAttribute("data-filter")
-            renderProjects(filter)
-        })
-    })
-
-    // Navbar scroll effect
-    window.addEventListener("scroll", handleNavbarScroll)
-
-    // Active navigation highlighting
-    window.addEventListener("scroll", updateActiveNavigation)
+    grid.innerHTML = projectData
+        .map(
+            (project, index) => `
+        <article class="glass-card story-card tilt-card reveal rounded-3xl p-6" data-reveal data-tilt data-cheer="${project.title} highlighted.">
+            <p class="text-xs font-semibold uppercase tracking-wider text-coral">Project ${String(index + 1).padStart(2, "0")}</p>
+            <h3 class="mt-2 font-display text-2xl font-bold text-ink">${project.title}</h3>
+            <p class="mt-2 text-sm font-medium text-teal">Tech: ${project.stack}</p>
+            <ul class="mt-4 space-y-2 text-sm leading-relaxed text-ink/80">
+                ${project.highlights.map((item) => `<li class="rounded-lg bg-white/60 px-3 py-2">${item}</li>`).join("")}
+            </ul>
+        </article>
+    `,
+        )
+        .join("");
 }
 
 function setupMobileMenu() {
-    const mobileMenuBtn = document.getElementById("mobileMenuBtn")
-    const mobileMenu = document.getElementById("mobileMenu")
+    const { mobileButton, mobileMenu } = refs;
+    if (!mobileButton || !mobileMenu) return;
 
-    if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener("click", () => {
-            mobileMenu.classList.toggle("hidden")
-            const icon = mobileMenuBtn.querySelector("i")
-            icon.classList.toggle("fa-bars")
-            icon.classList.toggle("fa-times")
-        })
-
-        // Close mobile menu when clicking on links
-        mobileMenu.querySelectorAll("a").forEach((link) => {
-            link.addEventListener("click", () => {
-                mobileMenu.classList.add("hidden")
-                const icon = mobileMenuBtn.querySelector("i")
-                icon.classList.add("fa-bars")
-                icon.classList.remove("fa-times")
-            })
-        })
-    }
+    mobileButton.addEventListener("click", () => {
+        const expanded = mobileButton.getAttribute("aria-expanded") === "true";
+        mobileButton.setAttribute("aria-expanded", String(!expanded));
+        mobileMenu.classList.toggle("hidden");
+    });
 }
 
-function handleNavbarScroll() {
-    const navbar = document.querySelector("nav")
-    if (window.scrollY > 50) {
-        navbar.classList.add("bg-midnight/95")
-        navbar.classList.remove("bg-midnight/80")
-    } else {
-        navbar.classList.add("bg-midnight/80")
-        navbar.classList.remove("bg-midnight/95")
-    }
-}
+function setupSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", (event) => {
+            const href = anchor.getAttribute("href");
+            if (!href || href.length <= 1) return;
 
-function updateActiveNavigation() {
-    const sections = document.querySelectorAll("section[id]")
-    const navLinks = document.querySelectorAll(".nav-link")
+            const target = document.querySelector(href);
+            if (!target) return;
 
-    let current = ""
-    sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 100
-        if (window.scrollY >= sectionTop) {
-            current = section.getAttribute("id")
-        }
-    })
+            event.preventDefault();
+            const headerOffset = document.querySelector("header")?.offsetHeight || 0;
+            const top = target.getBoundingClientRect().top + window.scrollY - headerOffset - 8;
 
-    navLinks.forEach((link) => {
-        link.classList.remove("text-cyber-blue")
-        if (link.getAttribute("href") === `#${current}`) {
-            link.classList.add("text-cyber-blue")
-        }
-    })
-}
+            window.scrollTo({
+                top,
+                behavior: prefersReducedMotion ? "auto" : "smooth",
+            });
 
-function setupScrollAnimations() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-    }
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("animate-slide-up")
+            if (refs.mobileMenu && refs.mobileButton && !refs.mobileMenu.classList.contains("hidden")) {
+                refs.mobileMenu.classList.add("hidden");
+                refs.mobileButton.setAttribute("aria-expanded", "false");
             }
-        })
-    }, observerOptions)
+        });
+    });
+}
 
-    // Observe elements for animation
-    const animatedElements = document.querySelectorAll(".project-card, .group")
-    animatedElements.forEach((el) => {
-        observer.observe(el)
-    })
+function setupRevealAnimations() {
+    const revealItems = document.querySelectorAll("[data-reveal]");
+    if (!revealItems.length) return;
+
+    if (prefersReducedMotion || typeof IntersectionObserver === "undefined") {
+        revealItems.forEach((item) => item.classList.add("is-visible"));
+        return;
+    }
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.12,
+            rootMargin: "0px 0px -40px 0px",
+        },
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
+}
+
+function setupTiltCards() {
+    const cards = document.querySelectorAll("[data-tilt]");
+    if (!cards.length) return;
+
+    if (prefersReducedMotion || !hasFinePointer) {
+        cards.forEach((card) => {
+            card.style.transform = "";
+        });
+        return;
+    }
+
+    cards.forEach((card) => {
+        card.addEventListener("pointermove", (event) => {
+            const rect = card.getBoundingClientRect();
+            const px = (event.clientX - rect.left) / rect.width;
+            const py = (event.clientY - rect.top) / rect.height;
+            const rotateY = (px - 0.5) * 8;
+            const rotateX = (0.5 - py) * 8;
+
+            card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-6px)`;
+            card.style.setProperty("--shine-x", `${(px * 100).toFixed(2)}%`);
+            card.style.setProperty("--shine-y", `${(py * 100).toFixed(2)}%`);
+            card.style.boxShadow = "0 24px 42px rgba(31, 41, 55, 0.18)";
+        });
+
+        card.addEventListener("pointerleave", () => resetCardTilt(card));
+        card.addEventListener("pointercancel", () => resetCardTilt(card));
+    });
+}
+
+function resetCardTilt(card) {
+    card.style.transform = "";
+    card.style.boxShadow = "";
+    card.style.setProperty("--shine-x", "50%");
+    card.style.setProperty("--shine-y", "50%");
+}
+
+function setupCheerSystem() {
+    const defaultMessage = "Hover a card and I smile wider.";
+
+    document.addEventListener("pointerover", (event) => {
+        const target = closestCheerTarget(event.target);
+        if (!target) return;
+        if (event.relatedTarget instanceof Node && target.contains(event.relatedTarget)) return;
+
+        const message = target.getAttribute("data-cheer") || randomSmileLine();
+        boostSmile(message);
+
+        if (event.pointerType === "mouse") {
+            spawnSparkles(event.clientX, event.clientY);
+        }
+    });
+
+    document.addEventListener("pointerout", (event) => {
+        const target = closestCheerTarget(event.target);
+        if (!target) return;
+        if (event.relatedTarget instanceof Node && target.contains(event.relatedTarget)) return;
+        scheduleSmileReset(defaultMessage);
+    });
+
+    document.addEventListener("focusin", (event) => {
+        const target = closestCheerTarget(event.target);
+        if (!target) return;
+        const message = target.getAttribute("data-cheer") || randomSmileLine();
+        boostSmile(message);
+    });
+
+    document.addEventListener("focusout", (event) => {
+        const target = closestCheerTarget(event.target);
+        if (!target) return;
+        scheduleSmileReset(defaultMessage);
+    });
+}
+
+function closestCheerTarget(node) {
+    if (!(node instanceof Element)) return null;
+    return node.closest("[data-cheer]");
+}
+
+function boostSmile(message) {
+    if (!refs.face || !refs.smileText || !refs.smileCount) return;
+
+    clearTimeout(smileResetTimer);
+    refs.face.classList.add("is-smiling");
+    refs.smileText.textContent = message;
+
+    const now = Date.now();
+    if (now - lastSmileAt > 220) {
+        smileCount += 1;
+        refs.smileCount.textContent = String(smileCount);
+        lastSmileAt = now;
+    }
+}
+
+function scheduleSmileReset(message) {
+    if (!refs.face || !refs.smileText) return;
+
+    clearTimeout(smileResetTimer);
+    smileResetTimer = setTimeout(() => {
+        refs.face.classList.remove("is-smiling");
+        refs.smileText.textContent = message;
+    }, 700);
+}
+
+function spawnSparkles(x, y) {
+    if (prefersReducedMotion || !hasFinePointer) return;
+
+    const now = performance.now();
+    if (now - lastSparkleAt < 110) return;
+    lastSparkleAt = now;
+
+    const amount = 5;
+
+    for (let i = 0; i < amount; i += 1) {
+        const dot = document.createElement("span");
+        dot.className = "sparkle-dot";
+
+        const size = 5 + Math.random() * 6;
+        const offsetX = (Math.random() - 0.5) * 26;
+        const offsetY = (Math.random() - 0.5) * 18;
+
+        dot.style.width = `${size}px`;
+        dot.style.height = `${size}px`;
+        dot.style.left = `${x + offsetX}px`;
+        dot.style.top = `${y + offsetY}px`;
+        dot.style.setProperty("--dx", `${(Math.random() - 0.5) * 60}px`);
+        dot.style.setProperty("--dy", `${-20 - Math.random() * 36}px`);
+
+        document.body.appendChild(dot);
+        dot.addEventListener(
+            "animationend",
+            () => {
+                dot.remove();
+            },
+            { once: true },
+        );
+    }
+}
+
+function setupMagneticButtons() {
+    const buttons = document.querySelectorAll(".magnetic");
+    if (!buttons.length || prefersReducedMotion || !hasFinePointer) return;
+
+    buttons.forEach((button) => {
+        button.addEventListener("pointermove", (event) => {
+            const rect = button.getBoundingClientRect();
+            const x = event.clientX - rect.left - rect.width / 2;
+            const y = event.clientY - rect.top - rect.height / 2;
+            const tx = x * 0.12;
+            const ty = y * 0.14;
+            button.style.transform = `translate(${tx.toFixed(2)}px, ${ty.toFixed(2)}px)`;
+        });
+
+        button.addEventListener("pointerleave", () => {
+            button.style.transform = "";
+        });
+    });
+}
+
+function setupCopyEmail() {
+    const button = document.getElementById("copyEmail");
+    if (!button || !refs.copyFeedback) return;
+
+    const email = "htooaunglynn5@email.com";
+
+    button.addEventListener("click", async () => {
+        try {
+            if (navigator.clipboard?.writeText) {
+                await navigator.clipboard.writeText(email);
+            } else {
+                fallbackCopyText(email);
+            }
+            refs.copyFeedback.textContent = "Copied to clipboard.";
+            boostSmile("Copied. Now go make something awesome.");
+        } catch (error) {
+            refs.copyFeedback.textContent = "Copy failed. Please copy manually.";
+            console.error(error);
+        }
+    });
+}
+
+function fallbackCopyText(text) {
+    const input = document.createElement("textarea");
+    input.value = text;
+    input.setAttribute("readonly", "readonly");
+    input.style.position = "absolute";
+    input.style.left = "-9999px";
+    document.body.appendChild(input);
+    input.select();
+    document.execCommand("copy");
+    input.remove();
+}
+
+function setupScrollProgress() {
+    const bar = document.getElementById("scrollProgress");
+    if (!bar) return;
+
+    const update = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+        bar.style.width = `${Math.min(100, Math.max(0, progress)).toFixed(2)}%`;
+    };
+
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+}
+
+function setupBackgroundParallax() {
+    if (prefersReducedMotion || !hasFinePointer) return;
+
+    window.addEventListener("pointermove", (event) => {
+        const x = (event.clientX / window.innerWidth - 0.5) * 10;
+        const y = (event.clientY / window.innerHeight - 0.5) * 10;
+        document.documentElement.style.setProperty("--bg-shift-x", `${x.toFixed(2)}px`);
+        document.documentElement.style.setProperty("--bg-shift-y", `${y.toFixed(2)}px`);
+    });
 }
 
 function updateCurrentYear() {
-    const yearElement = document.getElementById("currentYear")
-    if (yearElement) {
-        yearElement.textContent = new Date().getFullYear()
+    const year = document.getElementById("currentYear");
+    if (year) {
+        year.textContent = String(new Date().getFullYear());
     }
 }
 
-// Add some interactive particle effects (optional enhancement)
-function createParticleEffect() {
-    const canvas = document.createElement("canvas")
-    canvas.style.position = "fixed"
-    canvas.style.top = "0"
-    canvas.style.left = "0"
-    canvas.style.width = "100%"
-    canvas.style.height = "100%"
-    canvas.style.pointerEvents = "none"
-    canvas.style.zIndex = "1"
-    document.body.appendChild(canvas)
-
-    const ctx = canvas.getContext("2d")
-    canvas.width = window.innerWidth
-    canvas.height = window.innerHeight
-
-    const particles = []
-    const particleCount = 50
-
-    for (let i = 0; i < particleCount; i++) {
-        particles.push({
-            x: Math.random() * canvas.width,
-            y: Math.random() * canvas.height,
-            vx: (Math.random() - 0.5) * 0.5,
-            vy: (Math.random() - 0.5) * 0.5,
-            size: Math.random() * 2 + 1,
-            opacity: Math.random() * 0.5 + 0.2,
-        })
-    }
-
-    function animateParticles() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height)
-
-        particles.forEach((particle) => {
-            particle.x += particle.vx
-            particle.y += particle.vy
-
-            if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1
-            if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1
-
-            ctx.beginPath()
-            ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)
-            ctx.fillStyle = `rgba(0, 212, 255, ${particle.opacity})`
-            ctx.fill()
-        })
-
-        requestAnimationFrame(animateParticles)
-    }
-
-    animateParticles()
-
-    window.addEventListener("resize", () => {
-        canvas.width = window.innerWidth
-        canvas.height = window.innerHeight
-    })
+function randomSmileLine() {
+    const index = Math.floor(Math.random() * smileFallbacks.length);
+    return smileFallbacks[index];
 }
-
-// Initialize particle effect
-// createParticleEffect();
-
-// Console message for developers
-console.log(`
-🚀 Welcome to John Doe's Cyber Portfolio!
-💻 Built with Tailwind CSS & Vanilla JavaScript
-🎨 Cyberpunk theme with neon aesthetics
-⚡ Optimized for performance and accessibility
-`)
